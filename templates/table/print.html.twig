@@ -1,9 +1,12 @@
-<h1>Table de multiplication</h1>
+{% extends 'base.html.twig' %}
+{% block body %}
+<h1>Table de multiplication de {{n}}</h1>
 
 <table>
-    <tr>
-        {% for %}
-        <td>2*0=0</td>
+    
+        {% for i in 0..10 %}
+        <tr><td>{{i}} x {{n}} = </td><td>{{i*n}}</td></tr>
         {% endfor %}
-    </tr>
-</table>
+    
+</table>php
+{% endblock %}

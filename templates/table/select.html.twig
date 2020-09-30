@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<h1>Table de multiplication de </h1>
+
+<table>
+    
+        
+        <tr><td>Windows</td></tr>
+        {# {{ form(nom_formulaire)}} #}
+        {{form_start(nom_formulaire)}}
+        {{form_widget(nom_formulaire.table_number)}}
+        {{form_widget(nom_formulaire.Choisir)}}
+        {{form_end(nom_formulaire)}}
+    
+</table>php
+{% endblock %}
