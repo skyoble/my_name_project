@@ -14,6 +14,7 @@ class TableChoiceType extends AbstractType
     {
         $builder
             ->add('table_number',IntegerType::class)
+            ->add('table_number2',IntegerType::class)
             ->add('Choisir',SubmitType::class)
         ;
     }
