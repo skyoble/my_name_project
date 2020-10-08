@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Entity ;
+
 class Table {
 private $_num; 
 private $_min;
@@ -23,4 +25,4 @@ public function calcTable():array{
         return $result;
 }
 
->
+}

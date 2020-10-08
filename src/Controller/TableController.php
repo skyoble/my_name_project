@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Table;
 use App\Form\TableChoiceType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
@@ -31,6 +32,7 @@ class TableController extends AbstractController
         $n = $request->get('n');
         $x = $request->get('x');
         $method = $request->getMethod();
+        $table = new Table($n);
         if ($method == 'GET')
         {
             $n = $request->get('n');
@@ -48,6 +50,7 @@ class TableController extends AbstractController
             'n' => $n, 
             'x' => $x,
             'method'=> $method ,
+            'values'=> $table->calcTable(),
         ]);
     }
     /**
